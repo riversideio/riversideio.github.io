@@ -1,0 +1,37 @@
+---
+layout: default
+title: Riverside.io | We are a nonprofit coworking and hackerspace located in the heart of Downtown Riverside. Come join us!
+---
+
+<div class="hero">
+    <h4>{{ site.data.landing.subheader}}</h4>
+    {% for section in site.data.landing.about %}
+      <div class="three-w">
+          <i class="{{section.icon}}"></i>
+          <p>{{section.contents}} 
+            {% if section.href %}
+              <a href='{{section.href}}'>{{section.link-text}}</a>
+            {% endif %}</p>
+      </div>
+    {% endfor %}
+    <h4>From some of our members</h4>
+  	{% for testamonial in site.data.testamonials %}
+      <div class="testamonial" >
+    		<h2>{{ testamonial.name }}</h2>
+    		<p>{{ testamonial.contents }}</p>
+      </div>
+  	{% endfor %}
+</div>
+<div class="expect">
+  <h4>What to Expect</h4>
+  <p>{{site.data.landing.expect.contents}}</p>
+  <ul>
+    {% for item in site.data.landing.expect.list %}
+      <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="expect">
+  <h4>Become a Member</h4>
+  <p>{{site.data.landing.join}}</p>
+</div>

@@ -40,6 +40,23 @@ header[role="main"]{
 		}
 		.icon-list {
 			display: block;
+			&:focus {
+				background: $blue;
+				outline: 0;
+				color: #fff;
+				&~ .menu {
+					background: $blue;
+					display: block;
+					li{
+						a {	
+							color: #fff;
+							&:hover{
+								background : $darkGrey;
+							}
+						}
+					}
+				}
+			}
 		}
 		.menu {
 			display: none;
@@ -66,9 +83,6 @@ header[role="main"]{
 			&:hover{
 				display: block;
 			}
-		}
-		.icon-list:hover ~ .menu{
-			display: block!important;
 		}
 	}
 }

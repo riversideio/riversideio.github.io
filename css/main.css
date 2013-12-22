@@ -1319,6 +1319,17 @@ header[role="main"] {
       display: none; }
     header[role="main"] .icon-list {
       display: block; }
+      header[role="main"] .icon-list:focus {
+        background: #35c0cd;
+        outline: 0;
+        color: #fff; }
+        header[role="main"] .icon-list:focus ~ .menu {
+          background: #35c0cd;
+          display: block; }
+          header[role="main"] .icon-list:focus ~ .menu li a {
+            color: #fff; }
+            header[role="main"] .icon-list:focus ~ .menu li a:hover {
+              background: #333333; }
     header[role="main"] .menu {
       display: none;
       position: absolute;
@@ -1339,9 +1350,7 @@ header[role="main"] {
         header[role="main"] .menu li a {
           padding: 15px 0; }
       header[role="main"] .menu:hover {
-        display: block; }
-    header[role="main"] .icon-list:hover ~ .menu {
-      display: block !important; } }
+        display: block; } }
 
 input[type="text"], textarea {
   border-radius: 0 !important;

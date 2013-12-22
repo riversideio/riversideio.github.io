@@ -1370,8 +1370,7 @@ input[type="text"], textarea {
   border-radius: 50%; }
 
 body {
-  overflow-x: hidden;
-  padding-bottom: 40px; }
+  overflow-x: hidden; }
 
 .site {
   max-width: 815px;

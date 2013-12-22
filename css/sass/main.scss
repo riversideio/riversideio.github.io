@@ -14,6 +14,7 @@ $maxWidth : 815px;
 @import "typography";
 @import "header";
 @import "forms";
+@import "avatar";
 
 body{
 	overflow-x : hidden;
@@ -28,3 +29,4 @@ body{
 
 // pages
 @import "pages/landing";
+@import "pages/members";

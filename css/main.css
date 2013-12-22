@@ -1350,6 +1350,16 @@ input[type="text"], textarea {
   font-size: 20px !important;
   color: #333333; }
 
+.avatar {
+  display: block;
+  height: 70px;
+  width: 70px;
+  background-color: #e6e6e6;
+  background-size: cover;
+  padding: 0;
+  border: 5px solid #e6e6e6;
+  border-radius: 50%; }
+
 body {
   overflow-x: hidden;
   padding-bottom: 40px; }
@@ -1448,14 +1458,7 @@ body {
   .testamonials .testamonial .testamonial-avatar {
     position: absolute;
     top: 0;
-    left: 0;
-    height: 70px;
-    width: 70px;
-    background-color: #e6e6e6;
-    background-size: cover;
-    padding: 0;
-    border: 5px solid #e6e6e6;
-    border-radius: 50%; }
+    left: 0; }
 @media screen and (max-width: 420px) {
   .testamonials {
     float: left;
@@ -1495,3 +1498,19 @@ body {
       padding: 0; }
       .become .become-container input {
         max-width: 100%; } }
+
+.members-list {
+  list-style-type: none;
+  padding: 40px 0;
+  margin: 0; }
+  .members-list .member-list-item {
+    padding: 20px;
+    position: relative;
+    min-height: 70px;
+    border-bottom: 1px solid #e6e6e6; }
+    .members-list .member-list-item .member-list-item-avatar {
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+    .members-list .member-list-item .member-list-item-content {
+      margin-left: 100px; }

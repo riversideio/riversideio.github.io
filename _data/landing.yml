@@ -3,7 +3,7 @@ about :
   - icon: icon-clock
     contents : 24/7 Member Access and Daily Rates for visitors
   - icon: icon-location
-    contents: Downtown Riverside
+    contents: Downtown Riverside<br>
     href: 'https://www.google.com/maps/preview#!q=3567+Main+St%2C+Riverside%2C+CA&data=!4m15!2m14!1m13!1s0x80dcb1fa99afe221%3A0xfe3f25b87b503ecc!3m8!1m3!1d6608!2d-117.3729689!3d33.9841841!3m2!1i1535!2i767!4f13.1!4m2!3d33.9841879!4d-117.372977'
     link-text: '3567 Main St, Riverside, CA'
   - icon: icon-rocket

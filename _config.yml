@@ -1,4 +1,7 @@
+safe: true
 name: Riverside.io
 markdown: redcarpet
 pygments: true
 permalink: none
+lsi: false
+source: ./

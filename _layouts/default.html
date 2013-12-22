@@ -13,27 +13,11 @@
     <body>
 
         <div class="site">
-          <header role="main" class="clearfix">
-            
-            <h1 class="title"><a href="./index.html">{{ site.name }}</a></h1>
-            <a href="#" class="icon-list" tabindex="1"></a>
-            <div id="site-menu" class="menu menu-open menu-horizontal">
-              <ul>
-                <li>
-                  <a href="./events.html">Events</a>
-                </li>
-                <li>
-                  <a href="./members.html">Members</a>
-                </li>
-              </ul>
-            </div>
-
-            <a href="./signup.html" class="button alert signup-button">Signup</a>
-            
-          </header>
+          {% include header.html %}
           {{ content }}
           <footer role="main"></footer>
         </div>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

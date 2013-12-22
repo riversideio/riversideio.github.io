@@ -5,14 +5,13 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
 
 <div class="hero">
     <div class="site">
-      <h2>{{ site.data.landing.subheader}}</h2>
-
+      <h2>{{site.data.landing.subheader}}</h2>
       <div class="g-r">
         {% for section in site.data.landing.about %}
           <div class="u-1-3">
               <div class="hero-module">
                 <i class="{{section.icon}}"></i>
-                <p>{{section.contents}} 
+                <p>{{section.contents | markdownify }} 
                   {% if section.href %}
                     <a href='{{section.href}}'>{{section.link-text}}</a>
                   {% endif %}</p>
@@ -27,7 +26,7 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
             <i class="testamonial-avatar avatar" style='background-image:url("{{testamonial.avatar}}");'/>
             <div class="testamonial-content"></i>
               <div class="bubble">
-                <p>{{ testamonial.contents }}</p>
+                {{ testamonial.contents | markdownify }}
                 <strong>~ {{ testamonial.name }}</strong>
               </div>
             </div>
@@ -41,7 +40,7 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
   <h1>What to Expect</h1>
   <div class="g-r">
     <div class="u-2-3">
-      <p>{{site.data.landing.expect.contents}}</p>
+      <p>{{site.data.landing.expect.contents | markdownify}}</p>
     </div>
     <div class="u-1-3">
       <ul>
@@ -73,3 +72,6 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
     </div>
   </div>
 </div>
+<script>
+  var _testimonials = {{ site.data.testamonials | jsonify }};
+</script>

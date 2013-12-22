@@ -1,0 +1,16 @@
+---
+layout: default
+title: Riverside.io | Testimonials
+---
+<h1>Testimonials</h1>
+<ul class="members-list">
+	{% for testimonial in site.data.testamonials %}
+		<li class="member-list-item" id="{{testimonial.name | uri_escape}}">
+			<i class="avatar member-list-item-avatar" style='background-image:url("{{testimonial.avatar}}");'></i>
+			<article class="member-list-item-content">
+				<p>{{testimonial.contents}}</p>
+				<h3>~ {{testimonial.name}}</h3>
+			</article>
+		</li>
+	{% endfor %}
+</ul>

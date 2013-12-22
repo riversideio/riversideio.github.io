@@ -1,0 +1,30 @@
+// pure with a removed prefix 
+// eg. .pure-button will now be .button
+// http://purecss.io
+$maxWidth : 815px;
+
+@import "pure.min";
+@import "clearfix";
+@import "syntax";
+
+@import "fonts";
+@import "icons";
+@import "colors";
+@import "buttons";
+@import "typography";
+@import "header";
+@import "forms";
+
+body{
+	overflow-x : hidden;
+	padding-bottom : 40px;
+}
+
+.site {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  font-family: 'Cabin', sans-serif;
+}
+
+// pages
+@import "pages/landing";

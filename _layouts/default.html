@@ -6,9 +6,6 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
@@ -16,10 +13,23 @@
     <body>
 
         <div class="site">
-          <header role="main">
+          <header role="main" class="clearfix">
+            
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <!-- Setup Links-->
-            <a href="/signup.html" class="button">Signup</a>
+            <a href="#" class="icon-list"></a>
+            <div id="site-menu" class="menu menu-open menu-horizontal">
+              <ul>
+                <li>
+                  <a href="/events.html">Events</a>
+                </li>
+                <li>
+                  <a href="/members.html">Members</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="/signup.html" class="button alert signup-button">Signup</a>
+            
           </header>
           {{ content }}
           <footer role="main"></footer>

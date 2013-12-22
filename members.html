@@ -1,0 +1,15 @@
+---
+layout: default
+title: Riverside.io | Memembers
+---
+<ul class="members-list">
+	{% for member in site.data.members %}
+		<li class="member-list-item">
+			<i class="avatar member-list-item-avatar" style='background-image:url("{{member.avatar}}");'></i>
+			<article class="member-list-item-content">
+				<h3>{{member.name}}</h3>
+				<p>{{member.about}}</p>
+			</article>
+		</li>
+	{% endfor %}
+</ul>

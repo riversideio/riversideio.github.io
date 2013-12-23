@@ -3,14 +3,14 @@
 	padding: 40px 0 ;
 	margin: 0;
 	.member-list-item{
-		padding: 20px;
+		padding: 20px 40px;
 		position: relative;
 		min-height: 70px;
 		border-bottom: 1px solid $lightGrey;
 		.member-list-item-avatar{
 			position: absolute;
 			top: 20px;
-			left: 20px;
+			left: 40px;
 		}
 		.member-list-item-content{
 			margin-left: 100px;

@@ -1279,11 +1279,19 @@ a {
 
 p {
   font-weight: 700;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 p, li, strong, em, label {
   font-size: 20px;
   color: #333333; }
+
+small {
+  font-size: 14px;
+  color: #333333;
+  margin-top: -15px;
+  display: block; }
 
 header[role="main"] {
   max-height: 60px;
@@ -1351,6 +1359,24 @@ header[role="main"] {
           padding: 15px 0; }
       header[role="main"] .menu:hover {
         display: block; } }
+
+footer[role="main"] {
+  max-height: 60px;
+  padding: 20px;
+  overflow: hidden; }
+  footer[role="main"] .menu {
+    width: auto;
+    line-height: 70px;
+    margin-left: 20px;
+    margin-top: -28px; }
+    footer[role="main"] .menu a {
+      color: #35c0cd; }
+  footer[role="main"] .icon-list {
+    font-size: 45px;
+    text-decoration: none;
+    line-height: 55px;
+    float: right;
+    display: none; }
 
 input[type="text"], textarea {
   border-radius: 0 !important;
@@ -1512,13 +1538,19 @@ body {
   padding: 40px 0;
   margin: 0; }
   .members-list .member-list-item {
-    padding: 20px;
+    padding: 20px 40px;
     position: relative;
     min-height: 70px;
     border-bottom: 1px solid #e6e6e6; }
     .members-list .member-list-item .member-list-item-avatar {
       position: absolute;
       top: 20px;
-      left: 20px; }
+      left: 40px; }
     .members-list .member-list-item .member-list-item-content {
       margin-left: 100px; }
+
+.events-header {
+  padding: 0 40px; }
+  .events-header input {
+    width: 100%;
+    max-width: 500px; }

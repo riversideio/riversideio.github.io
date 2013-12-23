@@ -1,0 +1,41 @@
+footer[role="main"]{
+	max-height: 60px;
+	padding: 20px;
+	overflow: hidden;
+
+	.menu{
+		width: auto;
+		line-height: 70px;
+		margin-left: 20px;
+		margin-top: -28px;
+		a {
+			color: $blue;
+		}
+	}
+
+	.icon-list{
+		font-size : 45px;
+		text-decoration: none;
+		line-height: 55px;
+		float: right;
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

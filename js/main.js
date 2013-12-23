@@ -1,47 +1,18 @@
 var site = site || {};
 
-$(function(){
+// contents of main.js:
+require.config({
+    paths: {
+    	jquery : '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
+        switcher : './switcher',
+        calendar : './calendar',
+        moment : './moment'
+    }
+});
 
-	function Switcher ( options ) {
-		options = options || {};
-		this.$contents = options.$contents;
-		this.$name = options.$name;
-		this.$avatar = options.$avatar;
-		this.data = options.data;
-		this.length = this.data.length;
-		this.delay = options.delay || 8000;
 
-		this.startTimer( this.delay );
-		this.switchTo( 0 );
-	}
-
-	Switcher.prototype.switchTo = function ( num ) {
-		var data = this.data[ num ];
-		this.current = +num;
-		this.$avatar.css( "background-image",  "url(" + data.avatar + ")" );
-		this.$contents.html( data.contents.substring(0, 130) + 
-			'... <a href="./testimonials.html#'+ encodeURIComponent(data.name) + 
-			'">Read More</a>' );
-		this.$name.html( '~ ' + data.name );
-	};
-
-	Switcher.prototype.startTimer = function ( ms ) {
-		var _this = this;
-		clearTimeout( this._timer );
-		this._timer = setTimeout( function(){
-			_this.next( );
-		}, ms )
-
-	};
-
-	Switcher.prototype.next = function ( ) {
-		var index = this.current + 1 === this.length ? 
-			0 : this.current + 1;
-		this.switchTo( index );
-		this.startTimer( this.delay ); 
-	};
-
-	if ( '_testimonials' in window ) {
+if ( '_testimonials' in window ) {
+	require( [ 'jquery', 'switcher' ], function( $, Switcher ) { 
 		var $testimonial = $('.testamonial:first'),
 			switcher = new Switcher({
 				data : _testimonials,
@@ -50,5 +21,60 @@ $(function(){
 				$avatar : $testimonial.find('i')
 			});
 		site.testimonials = switcher;
-	}
-});
+	});
+}
+
+if ( '_events' in window ) {
+	require([ 'jquery', 'moment', 'calendar' ], function ( $, moment, Calendar ) {
+		var $el = $('.events'),
+			$input = $('#event-search'),
+			$msg = $('<li>').addClass('member-list-item'),
+			_timer,
+			calendar = new Calendar( { } );
+
+		function handleKeyPress ( ) {
+			clearTimeout( _timer );
+			_timer = setTimeout( function ( ) {
+				$el.html('').append( $msg.text('Loading') );
+				var value = $input.val();
+				calendar.searchFor( value, handleResponse );
+			}, 300)
+		}
+
+		function handleResponse ( err, res ) {
+			if ( err ) return console.warn( err );
+			var entries = res.feed.entry;
+			if( typeof entries === 'object' ){
+				if ( entries.length ) {
+					$el.html('');
+					for( var i = 0; i < entries.length; i += 1 ) {
+						var entry = entries[i];
+						createEvent( entry );
+					}
+					return;
+				}
+			}
+			$el.html('').append( $msg.text('No Results') );
+		}
+
+		function createEvent ( entry ) {
+			var _$el = $('<li/>'),
+				when = entry.gd$when[0],
+				startTime = moment( when.startTime ).format('MMMM D YYYY h:mm a'),
+				$header = $('<h2/>'),
+				$link = $('<a/>').attr( 'href', entry.link[0].href )
+					.text( entry.title.$t ),
+				$date = $('<small/>').text( '- ' + startTime ),
+				$content = $('<p/>').text( entry.content.$t );
+
+			$header.append( $link );
+			_$el.addClass('member-list-item').append([$header, $date, $content]);
+			$el.append(_$el);
+		}
+		$el.html('').append( $msg.text('Loading') );
+		calendar.upcomingEvents( handleResponse );
+		$input.on('keyup', handleKeyPress);
+
+		site.calendar = calendar;
+	});
+}

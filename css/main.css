@@ -1293,6 +1293,9 @@ small {
   margin-top: -15px;
   display: block; }
 
+.page-header {
+  padding-left: 40px; }
+
 header[role="main"] {
   max-height: 60px;
   padding: 20px; }
@@ -1387,8 +1390,8 @@ input[type="text"], textarea {
 
 .avatar {
   display: block;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   background-color: #e6e6e6;
   background-size: cover;
   padding: 0;
@@ -1547,7 +1550,7 @@ body {
       top: 20px;
       left: 40px; }
     .members-list .member-list-item .member-list-item-content {
-      margin-left: 100px; }
+      margin-left: 85px; }
 
 .events-header {
   padding: 0 40px; }

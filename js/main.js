@@ -9,6 +9,13 @@ require.config({
         moment : './moment'
     }
 });
+var signupApp = 'https://riversideio-access.herokuapp.com';
+// this is to startup the signup app
+require( ['jquery'], function ( ) {
+	$.ajax({
+		url : signupApp + '/startup.json'
+	})
+} );
 
 
 if ( '_testimonials' in window ) {
@@ -23,10 +30,9 @@ if ( '_testimonials' in window ) {
 				$avatar : $testimonial.find('i')
 			});
 		site.testimonials = switcher;
-
 		$submit.on('click', function( e ) {
 			e.preventDefault();
-			window.location = "https://riversideio-access.herokuapp.com/?email=" + $input.val();
+			window.location = signupApp + "/?email=" + $input.val();
 
 		})
 	});

@@ -14,6 +14,8 @@ require.config({
 if ( '_testimonials' in window ) {
 	require( [ 'jquery', 'switcher' ], function( $, Switcher ) { 
 		var $testimonial = $('.testamonial:first'),
+			$submit = $('.join-submit'),
+			$input = $('[name="email"]'),
 			switcher = new Switcher({
 				data : _testimonials,
 				$contents : $testimonial.find('p:first'),
@@ -21,6 +23,12 @@ if ( '_testimonials' in window ) {
 				$avatar : $testimonial.find('i')
 			});
 		site.testimonials = switcher;
+
+		$submit.on('click', function( e ) {
+			e.preventDefault();
+			window.location = "https://riversideio-access.herokuapp.com/?email=" + $input.val();
+
+		})
 	});
 }
 

@@ -1,4 +1,4 @@
-define("calendar", [ 'jquery', 'moment' ], function ( $, moment ) {
+define("calendar", [ 'jquery', 'moment', 'queryparse' ], function ( $, moment, qp ) {
 
 	//http://www.google.com/calendar/feeds/{cid}/public/full?alt=json&singleevents=true&sortorder={sortorder}&start-min={startdate}&start-max=2013-12-25T23:59:59
 
@@ -10,20 +10,28 @@ define("calendar", [ 'jquery', 'moment' ], function ( $, moment ) {
 		this.date = new Date( );
 	}
 
-	Calendar.prototype.upcomingEvents = function ( callback ) {
+	Calendar.prototype.getEvents = function ( callback ) {
 		// format date
 		date = moment();
-		var starttime = date.format(),
-			endTime = moment().add('M', 1).format(),
+		var startTime = this.fromDate ?
+				this.fromDate.format() :
+				this.inputDate ?
+					this.inputDate.format() :
+					date.format(),
+			endTime = this.toDate ?
+				this.toDate.format() :
+				this.fromDate ?
+					this.fromDate.add( 'M', 1 ).format( ) :
+					this.inputDate ?
+						this.inputDate.add( 'd', 1 ).format() : 
+						moment().add( 'M', 1 ).format(),
 			data = {
 				alt : 'json-in-script',
 				singleevents : true,
 				sortorder : this.sortorder,
-				timeMax : starttime,
-				timeMin : endTime,
-				orderby : 'starttime',
-				futureevents : true,
-				maxResults : 20
+				'start-max' : endTime,
+				'start-min' : startTime,
+				orderby : 'starttime'
 			},
 			url = 'http://www.google.com/calendar/feeds/' + 
 				this.cid + 
@@ -35,8 +43,44 @@ define("calendar", [ 'jquery', 'moment' ], function ( $, moment ) {
 	};
 
 	Calendar.prototype.searchFor = function ( query, callback ) {
+		var _query = qp( query );
+		query = _query.query;
+
+		this.inputDate = null;
+		for ( var key in _query.methods ){
+			this._methods( key, _query.methods[ key ] );
+		}
 		this.search = query.length ? query : null;
-		this.upcomingEvents( callback );
+		this.getEvents( callback );
+	};
+
+	Calendar.prototype._methods = function ( key, value ) {
+		var _this = this;
+		var methods = {
+			"date" : function ( date ) {
+				var _date = moment( date );
+				if ( _date.isValid() ) {
+					_this.inputDate = _date;
+				}
+				return 
+			},
+			"from" : function ( date ) {
+				var _date = moment( date );
+				if ( _date.isValid() ) {
+					_this.fromDate = _date;
+				}
+				return 
+			},
+			"to" : function ( date ) {
+				var _date = moment( date );
+				if ( _date.isValid() ) {
+					_this.toDate = _date;
+				}
+				return 
+			}
+
+		}
+		if ( methods[ key ] ) return methods[ key ]( value );
 	};
 
 	Calendar.prototype.fetchEvents = function ( url, data, callback ) {

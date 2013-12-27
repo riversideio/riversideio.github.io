@@ -6,12 +6,13 @@ require.config({
     	jquery : '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
         switcher : './switcher',
         calendar : './calendar',
-        moment : './moment'
+        moment : './moment',
+        queryparse : './queryparse'
     }
 });
 var signupApp = 'https://riversideio-access.herokuapp.com';
 // this is to startup the signup app
-require( ['jquery'], function ( ) {
+require( ['jquery'], function ( $ ) {
 	$.ajax({
 		url : signupApp + '/startup.json'
 	})
@@ -52,7 +53,7 @@ if ( '_events' in window ) {
 				$el.html('').append( $msg.text('Loading') );
 				var value = $input.val();
 				calendar.searchFor( value, handleResponse );
-			}, 300)
+			}, 500)
 		}
 
 		function handleResponse ( err, res ) {
@@ -86,7 +87,7 @@ if ( '_events' in window ) {
 			$el.append(_$el);
 		}
 		$el.html('').append( $msg.text('Loading') );
-		calendar.upcomingEvents( handleResponse );
+		calendar.getEvents( handleResponse );
 		$input.on('keyup', handleKeyPress);
 
 		site.calendar = calendar;

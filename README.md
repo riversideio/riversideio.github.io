@@ -48,3 +48,21 @@ jeykll serve
 ```
 
 Then visit `localhost:4000` and the site should be there if not check for errors in you terminal.
+
+##### CSS precompiler
+
+We are using `sass` as a precompiler, nothing bleeding edge so  any newer version will suffice, to install run.
+
+```
+gem install sass
+```
+
+then when you want to compile the sass files in the root directory run
+
+```
+sass css/sass/main.scss:css/main.css 
+```
+
+##### Notes about Javascript
+
+We are using [require.js](http://requirejs.org/) to modulize our scripts, to include a script require into the top of `main.js`, and require it where needed. Please read documentation to see how to create `amd modules`.

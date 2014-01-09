@@ -1557,3 +1557,14 @@ body {
   .events-header input {
     width: 100%;
     max-width: 500px; }
+
+.item-list {
+  list-style-type: none;
+  margin: 0; }
+  .item-list li {
+    padding: 20px 40px;
+    position: relative;
+    min-height: 70px;
+    border-bottom: 1px solid #e6e6e6; }
+    .item-list li h3 {
+      color: #35c0cd; }

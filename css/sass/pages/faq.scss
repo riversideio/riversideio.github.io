@@ -1,0 +1,13 @@
+.item-list{
+	list-style-type: none;
+	margin: 0;
+	li{
+		padding: 20px 40px;
+		position: relative;
+		min-height: 70px;
+		border-bottom: 1px solid $lightGrey;
+		h3 {
+			color : $blue;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+title: Riverside.io | FAQ
+---
+<h2 class="page-header">FAQ</h2>
+<ul class="item-list">
+	{% for faq in site.data.faqs %}
+		<li>
+			<article>
+				<h3>{{faq.question}}</h3>
+				<p>{{faq.answer | markdownify }}</p>
+			</article>
+		</li>
+	{% endfor %}
+</ul>

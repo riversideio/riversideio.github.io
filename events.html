@@ -1,9 +1,18 @@
 ---
 layout: default
-title: Riverside.io | Members
+title: Riverside.io | Events
 ---
 <div class="events-header">
-	<h2>Events</h2>
+	<div class="g-r pure-hidden-phone">
+    {% for src in site.data.events.photos %}
+      <div class="u-1-5">
+        <a href="{{src}}"><img src="{{src}}"></a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <h2>Events</h2>
+
 	<form class="event-search form-stacked form">
 		<label for="event-search" >Search</label>
 		<input type="text" name="search"  id="event-search" placeholder="js, python, wordpress"/>

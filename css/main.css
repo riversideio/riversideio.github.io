@@ -1464,23 +1464,23 @@ body {
       .hero .g-r {
         float: left; } }
 
-.testamonials .testamonial:first-child {
+.testimonials .testimonial:first-child {
   display: block; }
-.testamonials .testamonial {
+.testimonials .testimonial {
   display: none;
   position: relative; }
-  .testamonials .testamonial .testamonial-content {
+  .testimonials .testimonial .testimonial-content {
     margin: 0 0 20px 100px; }
-    .testamonials .testamonial .testamonial-content h2 {
+    .testimonials .testimonial .testimonial-content h2 {
       margin: .01em 0; }
-    .testamonials .testamonial .testamonial-content .bubble {
+    .testimonials .testimonial .testimonial-content .bubble {
       background: #fff;
       padding: 20px;
       position: relative; }
-      .testamonials .testamonial .testamonial-content .bubble p {
+      .testimonials .testimonial .testimonial-content .bubble p {
         color: #333333;
         text-shadow: none; }
-      .testamonials .testamonial .testamonial-content .bubble:before {
+      .testimonials .testimonial .testimonial-content .bubble:before {
         content: " ";
         width: 0;
         height: 0;
@@ -1490,24 +1490,24 @@ body {
         position: absolute;
         left: -20px;
         top: 0; }
-      .testamonials .testamonial .testamonial-content .bubble strong {
+      .testimonials .testimonial .testimonial-content .bubble strong {
         color: #bf3730; }
-  .testamonials .testamonial .testamonial-avatar {
+  .testimonials .testimonial .testimonial-avatar {
     position: absolute;
     top: 0;
     left: 0; }
 @media screen and (max-width: 420px) {
-  .testamonials {
+  .testimonials {
     float: left;
     background: #35c0cd; }
-    .testamonials .testamonial .testamonial-avatar {
+    .testimonials .testimonial .testimonial-avatar {
       top: 10px;
       left: 10px;
       height: 50px;
       width: 50px; }
-    .testamonials .testamonial .testamonial-content {
+    .testimonials .testimonial .testimonial-content {
       margin: 20px 20px 20px 80px; }
-      .testamonials .testamonial .testamonial-content .bubble:before {
+      .testimonials .testimonial .testimonial-content .bubble:before {
         top: 80px; } }
 
 .expect {

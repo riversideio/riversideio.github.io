@@ -67,14 +67,14 @@
 	}
 }
 
-.testamonials {
-	.testamonial:first-child {
+.testimonials {
+	.testimonial:first-child {
 		display: block;
 	}
-	.testamonial {
+	.testimonial {
 		display: none;
 		position: relative;
-		.testamonial-content {
+		.testimonial-content {
 			margin: 0 0 20px 100px;
 			h2{
 				margin: .01em 0;
@@ -103,7 +103,7 @@
 				}
 			}
 		}
-		.testamonial-avatar{
+		.testimonial-avatar{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -112,14 +112,14 @@
 	@media screen and ( max-width : 420px ) {
 		float: left;
 		background: $blue;
-		.testamonial{		
-			.testamonial-avatar{
+		.testimonial{		
+			.testimonial-avatar{
 				top: 10px;
 				left: 10px;
 				height: 50px;
 				width: 50px;
 			}
-			.testamonial-content{
+			.testimonial-content{
 				margin: 20px 20px 20px 80px;
 				.bubble{
 					&:before{

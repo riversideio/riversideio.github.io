@@ -21,7 +21,7 @@ require( ['jquery'], function ( $ ) {
 
 if ( '_testimonials' in window ) {
 	require( [ 'jquery', 'switcher' ], function( $, Switcher ) { 
-		var $testimonial = $('.testamonial:first'),
+		var $testimonial = $('.testimonial:first'),
 			$submit = $('.join-submit'),
 			$input = $('[name="email"]'),
 			switcher = new Switcher({

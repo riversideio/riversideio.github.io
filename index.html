@@ -20,14 +20,14 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
         {% endfor %}
       </div>
       <h2>From some of our members</h2>
-      <div class="testamonials">
-      	{% for testamonial in site.data.testamonials %}
-          <div class="testamonial" >
-            <i class="testamonial-avatar avatar" style='background-image:url("{{testamonial.avatar}}");'/>
-            <div class="testamonial-content"></i>
+      <div class="testimonials">
+      	{% for testimonial in site.data.testimonials %}
+          <div class="testimonial" >
+            <i class="testimonial-avatar avatar" style='background-image:url("{{testimonial.avatar}}");'/>
+            <div class="testimonial-content"></i>
               <div class="bubble">
-                {{ testamonial.contents | markdownify }}
-                <strong>~ {{ testamonial.name }}</strong>
+                {{ testimonial.contents | markdownify }}
+                <strong>~ {{ testimonial.name }}</strong>
               </div>
             </div>
           </div>
@@ -71,5 +71,5 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
   </div>
 </div>
 <script>
-  var _testimonials = {{ site.data.testamonials | jsonify }};
+  var _testimonials = {{ site.data.testimonials | jsonify }};
 </script>

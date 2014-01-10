@@ -50,6 +50,17 @@ title: Riverside.io | We are a nonprofit coworking and hackerspace located in th
       </ul>
     </div>
   </div>
+  <div class="g-r">
+    {% for photo in site.data.landing.expect.photos %}
+      <div class="u-1">
+        <p>
+          <img src="{{photo.src}}">
+          <br /> 
+          {{photo.description}}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 <div class="become">
   <div class="site">

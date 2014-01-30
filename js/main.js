@@ -7,7 +7,8 @@ require.config({
         switcher : './switcher',
         calendar : './calendar',
         moment : './moment',
-        queryparse : './queryparse'
+        queryparse : './queryparse',
+        io : './sdk'
     }
 });
 var signupApp = 'https://riversideio-access.herokuapp.com';
@@ -20,7 +21,7 @@ require( ['jquery'], function ( $ ) {
 
 
 if ( '_testimonials' in window ) {
-	require( [ 'jquery', 'switcher' ], function( $, Switcher ) { 
+	require( [ 'jquery', 'switcher', 'io', 'moment' ], function( $, Switcher, io, moment ) { 
 		var $testimonial = $('.testimonial:first'),
 			$submit = $('.join-submit'),
 			$input = $('[name="email"]'),
@@ -34,7 +35,15 @@ if ( '_testimonials' in window ) {
 		$submit.on('click', function( e ) {
 			e.preventDefault();
 			window.location = signupApp + "/?email=" + $input.val();
-
+		});
+		io.checkins.all(function( err, res){
+			if ( err ) console.warn( err );
+			if ( res.success ){
+				var checkins = res.checkins.results,
+					last = checkins[ checkins.length - 1 ],
+					fromNow = moment( last.createdAt ).fromNow();
+				$('.last-checkin').html( 'Last checkin ' + fromNow );
+			}
 		})
 	});
 }

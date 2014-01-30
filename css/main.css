@@ -1305,6 +1305,19 @@ header[role="main"] {
     header[role="main"] h1 a {
       text-decoration: none;
       color: #333333; }
+    header[role="main"] h1:hover ~ .last-checkin {
+      display: block; }
+  header[role="main"] .last-checkin {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    display: inline-block;
+    font-size: 15px;
+    color: #ddd;
+    display: none; }
+    @media screen and (max-width: 815px) {
+      header[role="main"] .last-checkin {
+        left: 40px; } }
   header[role="main"] .menu {
     float: left;
     display: table;
@@ -1404,7 +1417,8 @@ body {
 .site {
   max-width: 815px;
   margin: 0 auto;
-  font-family: 'Cabin', sans-serif; }
+  font-family: 'Cabin', sans-serif;
+  position: relative; }
 
 .hero {
   background: url("../img/hero.jpg");

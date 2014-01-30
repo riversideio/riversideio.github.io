@@ -9,6 +9,23 @@ header[role="main"]{
 			text-decoration: none;
 			color: $darkGrey;
 		}		
+		&:hover{
+			& ~ .last-checkin {
+				display: block;
+			}
+		}
+	}
+	.last-checkin {
+		position: absolute;
+		top: 50px;
+		left: 20px;
+		display: inline-block;
+		font-size: 15px;
+		color: #ddd;
+		display: none;
+		@media screen and ( max-width : $maxWidth ) {
+			left: 40px;
+		}
 	}
 	.menu{
 		float: left;

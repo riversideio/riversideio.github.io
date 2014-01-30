@@ -1,14 +1,6 @@
 - name : Adam Webster
   avatar : ./img/members/adamwebster.jpg
   about : Adam is currently employed as an IT Director at the Inland Empire Labor Management Cooperation Committee. He is interested in exploring the intersection between technology community and creativity. 
-- name : Adrian Testa-Avila
-  avatar : ./img/members/adriantesta-avila.png
-- name : Benjamin Mueller
-  avatar : ./img/members/benjaminmueller.jpeg
-  about : Benjamin believes in GPL software. He is a co-organizer of Inland Empire WordPress. His favorite languages are PHP and JavaScript. He's learning Mongo and Node.js.
-- name : Conley Read
-  avatar : ./img/members/conleyread.jpg
-  about : Conley manages the Computing and Communications Applications and Virtualization team at UC Riverside. He's also a Co-founder of StartupIE.
 - name : Daniel Villarreal
   avatar : ./img/members/danielvillarreal.jpg
   about : "Daniel handles system operations & web development for Cal State San Bernardino. He likes to build and break stuff and knows his way around Unix really well."

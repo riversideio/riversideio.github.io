@@ -9,7 +9,7 @@ title: Riverside.io | Members
 			<i class="avatar member-list-item-avatar" style='background-image:url("{{member.avatar}}");'></i>
 			<article class="member-list-item-content">
 				<h3>{{member.name}}</h3>
-				{% if about %}
+				{% if member.about %}
 					<p>{{member.about | markdownify}}</p>
 				{% endif %}
 			</article>

@@ -31,12 +31,16 @@ if ( '_testimonials' in window ) {
 				$name : $testimonial.find('strong'),
 				$avatar : $testimonial.find('i')
 			});
+		site.io = io;
 		site.testimonials = switcher;
 		$submit.on('click', function( e ) {
 			e.preventDefault();
 			window.location = signupApp + "/?email=" + $input.val();
 		});
-		io.checkins.all(function( err, res){
+		io.checkins.all({
+			limit : 1,
+			order : '-createdAt',
+		},function( err, res){
 			if ( err ) console.warn( err );
 			if ( res.success ){
 				var checkins = res.checkins.results,

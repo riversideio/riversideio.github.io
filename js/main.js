@@ -60,6 +60,7 @@ if ( '_events' in window ) {
 			_timer,
 			calendar = new Calendar( { } );
 
+		site.calendar = calendar;
 		function handleKeyPress ( ) {
 			clearTimeout( _timer );
 			_timer = setTimeout( function ( ) {
@@ -71,7 +72,7 @@ if ( '_events' in window ) {
 
 		function handleResponse ( err, res ) {
 			if ( err ) return console.warn( err );
-			var entries = res.feed.entry;
+			var entries = res.events;
 			if( typeof entries === 'object' ){
 				if ( entries.length ) {
 					$el.html('');
@@ -87,13 +88,18 @@ if ( '_events' in window ) {
 
 		function createEvent ( entry ) {
 			var _$el = $('<li/>'),
-				when = entry.gd$when[0],
-				startTime = moment( when.startTime ).format('MMMM D YYYY h:mm a'),
+				startTime = moment( entry.start.dateTime )
+					.format('MMMM D YYYY h:mm a'),
+				endTime = moment( entry.end.dateTime )
+					.format('h:mm a'),
 				$header = $('<h2/>'),
-				$link = $('<a/>').attr( 'href', entry.link[0].href )
-					.text( entry.title.$t ),
-				$date = $('<small/>').text( '- ' + startTime ),
-				$content = $('<p/>').text( entry.content.$t );
+				$link = $('<a/>').attr( 'href', '#' )
+					.text( entry.summary ),
+				$date = $('<small/>').text( '~ ' + 
+					startTime + 
+					' - ' + 
+					endTime ),
+				$content = $('<p/>').text( entry.description );
 
 			$header.append( $link );
 			_$el.addClass('member-list-item').append([$header, $date, $content]);
@@ -103,6 +109,5 @@ if ( '_events' in window ) {
 		calendar.getEvents( handleResponse );
 		$input.on('keyup', handleKeyPress);
 
-		site.calendar = calendar;
 	});
 }

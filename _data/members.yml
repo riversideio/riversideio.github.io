@@ -20,6 +20,8 @@
 - name : Justin Nelson
   avatar : ./img/members/justinnelson.jpg
   about : "Justin is a PhD student at UC Riverside, a card-carrying member of EFF, a Linux geek, and a rabble-rouser. He enjoys tinkering, beer, altnernative transportation, and free culture."
+- name : Kevin Carrington
+  avatar : ./img/members/kevincarrington.jpg
 - name : Kevin Chandler
   avatar : ./img/members/kevinchandler.jpg
 - name : Long Dao
@@ -35,7 +37,7 @@
   about : "Mike is the CTO for Maven 2.0 and specializes in #EECMS. He is currently tinkering with learning Ruby on Rails, Javascript and mobile application development."
 - name : Ralph Richardson
   avatar : ./img/members/ralphrichardson.jpg
-  about : "Serial Entrepreneur. Founder & CEO of Maven 2.0. Currently building @hecklersports and @BermyArtist. Consulting for a few other cool start-ups."
+  about : "Serial Entrepreneur. Founder & CEO of Maven 2.0. Actively giving back to the startup community."
 - name : Scott Motte
   avatar : ./img/members/scottmotte.png
   about : Scott is a developer evangelist at [SendGrid](http://sendgrid.com). He likes to code in Ruby and JavaScript and is passionate about building tech community.

@@ -1,4 +1,5 @@
-var site = site || {};
+var site = site || {},
+	apiUrl = 'https://victoria-club.herokuapp.com/api/v0/';
 
 // contents of main.js:
 require.config({
@@ -15,7 +16,7 @@ var signupApp = 'https://riversideio-access.herokuapp.com';
 // this is to startup the signup app
 require( ['jquery'], function ( $ ) {
 	$.ajax({
-		url : signupApp + '/startup.json'
+		url : signupApp + '/a/startup.json'
 	})
 } );
 
@@ -32,6 +33,7 @@ if ( '_testimonials' in window ) {
 				$avatar : $testimonial.find('i')
 			});
 		site.io = io;
+		io.setUrl( apiUrl );
 		site.testimonials = switcher;
 		$submit.on('click', function( e ) {
 			e.preventDefault();

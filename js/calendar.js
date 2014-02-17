@@ -1,7 +1,8 @@
 define("calendar", [ 'jquery', 'moment', 'queryparse', 'io' ], function ( $, moment, qp, io ) {
 
 	//http://www.google.com/calendar/feeds/{cid}/public/full?alt=json&singleevents=true&sortorder={sortorder}&start-min={startdate}&start-max=2013-12-25T23:59:59
-
+	io.setUrl( apiUrl ); 
+	
 	function Calendar ( options ) {
 		options = options || {};
 		this.max = options.max || '15';

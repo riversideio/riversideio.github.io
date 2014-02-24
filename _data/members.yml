@@ -41,6 +41,9 @@
 - name : Mike Stecker
   avatar : ./img/members/mikestecker.jpg
   about : "Mike is the CTO for [Maven 2.0](http://maven20.com) and specializes in #EECMS. He is currently tinkering with learning Ruby on Rails, Javascript and mobile application development."
+- name : Patrick Edgett
+  avatar : ./img/members/patrickedgett.jpg
+  about : "Patrick is an economist and entrepreneur. A graduate of UC Riverside, he now spends the majority of his time building his startup - [Waitless](http://thewaitlessapp.com/)."
 - name : Ralph Richardson
   avatar : ./img/members/ralphrichardson.jpg
   about : "Serial Entrepreneur. CEO of [Maven 2.0](http://maven20.com). Actively giving back to the startup community. Follow him [@ralphrichardson](http://twitter.com/ralphrichardson)."

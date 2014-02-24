@@ -1571,6 +1571,14 @@ body {
   .events-header input {
     width: 100%;
     max-width: 500px; }
+  .events-header .labels label {
+    float: left; }
+  .events-header .labels .right {
+    float: right; }
+  .events-header .labels:after {
+    clear: both;
+    display: block;
+    content: ""; }
 
 .item-list {
   list-style-type: none;

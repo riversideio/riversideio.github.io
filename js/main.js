@@ -1,4 +1,5 @@
-var site = site || {};
+var site = site || {},
+	apiUrl = 'https://victoria-club.herokuapp.com/api/v0/';
 
 // contents of main.js:
 require.config({
@@ -15,7 +16,7 @@ var signupApp = 'https://riversideio-access.herokuapp.com';
 // this is to startup the signup app
 require( ['jquery'], function ( $ ) {
 	$.ajax({
-		url : signupApp + '/startup.json'
+		url : signupApp + '/a/startup.json'
 	})
 } );
 
@@ -32,6 +33,7 @@ if ( '_testimonials' in window ) {
 				$avatar : $testimonial.find('i')
 			});
 		site.io = io;
+		io.setUrl( apiUrl );
 		site.testimonials = switcher;
 		$submit.on('click', function( e ) {
 			e.preventDefault();
@@ -60,6 +62,7 @@ if ( '_events' in window ) {
 			_timer,
 			calendar = new Calendar( { } );
 
+		site.calendar = calendar;
 		function handleKeyPress ( ) {
 			clearTimeout( _timer );
 			_timer = setTimeout( function ( ) {
@@ -71,7 +74,7 @@ if ( '_events' in window ) {
 
 		function handleResponse ( err, res ) {
 			if ( err ) return console.warn( err );
-			var entries = res.feed.entry;
+			var entries = res.events;
 			if( typeof entries === 'object' ){
 				if ( entries.length ) {
 					$el.html('');
@@ -87,13 +90,18 @@ if ( '_events' in window ) {
 
 		function createEvent ( entry ) {
 			var _$el = $('<li/>'),
-				when = entry.gd$when[0],
-				startTime = moment( when.startTime ).format('MMMM D YYYY h:mm a'),
+				startTime = moment( entry.start.dateTime )
+					.format('MMMM D YYYY h:mm a'),
+				endTime = moment( entry.end.dateTime )
+					.format('h:mm a'),
 				$header = $('<h2/>'),
-				$link = $('<a/>').attr( 'href', entry.link[0].href )
-					.text( entry.title.$t ),
-				$date = $('<small/>').text( '- ' + startTime ),
-				$content = $('<p/>').text( entry.content.$t );
+				$link = $('<a/>').attr( 'href', '#' )
+					.text( entry.summary ),
+				$date = $('<small/>').text( '~ ' + 
+					startTime + 
+					' - ' + 
+					endTime ),
+				$content = $('<p/>').text( entry.description );
 
 			$header.append( $link );
 			_$el.addClass('member-list-item').append([$header, $date, $content]);
@@ -103,6 +111,5 @@ if ( '_events' in window ) {
 		calendar.getEvents( handleResponse );
 		$input.on('keyup', handleKeyPress);
 
-		site.calendar = calendar;
 	});
 }

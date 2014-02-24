@@ -4,4 +4,17 @@
 		width: 100%;
 		max-width: 500px;
 	}
+	.labels{
+		label {
+			float: left;
+		}
+		.right {
+			float : right;
+		}
+		&:after{
+			clear: both;
+			display: block;
+			content: "";
+		}
+	}
 }

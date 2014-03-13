@@ -33,12 +33,19 @@
   about : "Thanks to Riverside.IO, I've signed several website contracts, made a lot of talented friends, and found a hot girl and got engaged to be married. If you come stop by, you WILL find yourself a girl (or guy) and save a LOT on car insurance too. Gosh o MIGHTY. I love Riverside.IO so much that I can barely walk. Barely BREATHE. I need someone to walk across the street with or I'll fall down. I love it so much that I think I'll have my wedding here. Maybe I'll name my first kid Riverside.IO. You should too."
 - name : Lauren Patterson
   avatar : ./img/members/laurenpatterson.jpg
+  about: "Hi I'm Lauren."
+- name : Melissa Morgan
+  avatar : ./img/members/melissamorgan.jpg
+  about : "Melissa has a rich, diverse background, combined with a vision to continually be learning, teaching, serving and being creative. She is an artist, graphic designer, diversity educator, volunteer, youth advocate, mom and peacemaker at heart."
 - name : Mike Kennedy
   avatar : ./img/members/mikekennedy.jpg
   about : "Mike is an Enterprise Architect at UC Riverside. He is an organizer of StartupIE and enjoys programming in Java, Objective-C and Ruby."
 - name : Mike Stecker
   avatar : ./img/members/mikestecker.jpg
   about : "Mike is the CTO for [Maven 2.0](http://maven20.com) and specializes in #EECMS. He is currently tinkering with learning Ruby on Rails, Javascript and mobile application development."
+- name : Patrick Edgett
+  avatar : ./img/members/patrickedgett.jpg
+  about : "Patrick is an economist and entrepreneur. A graduate of UC Riverside, he now spends the majority of his time building his startup - [Waitless](http://thewaitlessapp.com/)."
 - name : Ralph Richardson
   avatar : ./img/members/ralphrichardson.jpg
   about : "Serial Entrepreneur. CEO of [Maven 2.0](http://maven20.com). Actively giving back to the startup community. Follow him [@ralphrichardson](http://twitter.com/ralphrichardson)."

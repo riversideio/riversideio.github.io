@@ -74,7 +74,7 @@ if ( '_events' in window ) {
 
 		function handleResponse ( err, res ) {
 			if ( err ) return console.warn( err );
-			var entries = res.events;
+			var entries = res.feed.entry;
 			if( typeof entries === 'object' ){
 				if ( entries.length ) {
 					$el.html('');
@@ -90,18 +90,19 @@ if ( '_events' in window ) {
 
 		function createEvent ( entry ) {
 			var _$el = $('<li/>'),
-				startTime = moment( entry.start.dateTime )
+        when = entry.gd$when[0],
+				startTime = moment( when.startTime )
 					.format('MMMM D YYYY h:mm a'),
-				endTime = moment( entry.end.dateTime )
+				endTime = moment( when.endTime )
 					.format('h:mm a'),
 				$header = $('<h2/>'),
-				$link = $('<a/>').attr( 'href', '#' )
-					.text( entry.summary ),
+				$link = $('<a/>').attr( 'href', entry.link[0].href )
+					.text( entry.title.$t ),
 				$date = $('<small/>').text( '~ ' + 
 					startTime + 
 					' - ' + 
 					endTime ),
-				$content = $('<p/>').text( entry.description );
+				$content = $('<p/>').text( entry.content.$t );
 
 			$header.append( $link );
 			_$el.addClass('member-list-item').append([$header, $date, $content]);

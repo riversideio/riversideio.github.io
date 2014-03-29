@@ -1,7 +1,6 @@
-define("calendar", [ 'jquery', 'moment', 'queryparse', 'io' ], function ( $, moment, qp, io ) {
+define("calendar", [ 'jquery', 'moment', 'queryparse' ], function ( $, moment, qp ) {
 
 	//http://www.google.com/calendar/feeds/{cid}/public/full?alt=json&singleevents=true&sortorder={sortorder}&start-min={startdate}&start-max=2013-12-25T23:59:59
-	io.setUrl( apiUrl ); 
 	
 	function Calendar ( options ) {
 		options = options || {};
@@ -27,15 +26,20 @@ define("calendar", [ 'jquery', 'moment', 'queryparse', 'io' ], function ( $, mom
 						this.inputDate.add( 'd', 1 ).format() : 
 						moment().add( 'M', 1 ).format(),
 			data = {
-				singleEvents : true,
-				timeMax : endTime,
-				timeMin : startTime,
-				orderBy : 'startTime'
-			};
+        alt : 'json-in-script',
+				singleevents : true,
+        sortorder : this.sortorder,
+        'start-max' : endTime,
+        'start-min' : startTime,
+				orderby : 'starttime'
+			},
+      url = 'http://www.google.com/calendar/feeds/' + 
+        this.cid + 
+        '/public/full';
 
 		if ( this.search ) data.q = this.search;
 
-		this.fetchEvents( data, callback );
+		this.fetchEvents( url, data, callback );
 	};
 
 	Calendar.prototype.searchFor = function ( query, callback ) {
@@ -79,8 +83,16 @@ define("calendar", [ 'jquery', 'moment', 'queryparse', 'io' ], function ( $, mom
 		if ( methods[ key ] ) return methods[ key ]( value );
 	};
 
-	Calendar.prototype.fetchEvents = function ( data, callback ) {
-		io.events.all( data, callback );
+	Calendar.prototype.fetchEvents = function ( url, data, callback ) {
+    $.ajax({
+      url : url,
+      data : data,
+      type : 'get',
+      dataType : 'jsonp',
+      processData : true,
+      success : callback.bind( null, null ),
+      error : callback
+    });
 	};
 
 	return Calendar;

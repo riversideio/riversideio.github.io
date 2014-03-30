@@ -9,7 +9,8 @@ require.config({
         calendar : './calendar',
         moment : './moment',
         queryparse : './queryparse',
-        io : './sdk'
+        io : './sdk',
+        map : './map'
     }
 });
 var signupApp = 'https://riversideio-access.herokuapp.com';
@@ -22,7 +23,7 @@ require( ['jquery'], function ( $ ) {
 
 
 if ( '_testimonials' in window ) {
-	require( [ 'jquery', 'switcher', 'io', 'moment' ], function( $, Switcher, io, moment ) { 
+	require( [ 'jquery', 'switcher', 'io', 'moment', 'map' ], function( $, Switcher, io, moment, map ) { 
 		var $testimonial = $('.testimonial:first'),
 			$submit = $('.join-submit'),
 			$input = $('[name="email"]'),
@@ -32,6 +33,7 @@ if ( '_testimonials' in window ) {
 				$name : $testimonial.find('strong'),
 				$avatar : $testimonial.find('i')
 			});
+    
 		site.io = io;
 		io.setUrl( apiUrl );
 		site.testimonials = switcher;
@@ -50,17 +52,15 @@ if ( '_testimonials' in window ) {
 					fromNow = moment( last.createdAt ).fromNow();
 				$('.last-checkin').html( 'Last checkin ' + fromNow );
 			}
-		})
-	});
+		});
+    map();
+  });
 }
 
 if ( '_events' in window ) {
 	require([ 'jquery', 'moment', 'calendar' ], function ( $, moment, Calendar ) {
 		var $el = $('.events'),
-			$input = $('#event-search'),
-			$msg = $('<li>').addClass('member-list-item'),
-			_timer,
-			calendar = new Calendar( { } );
+		  calendar = new Calendar( { } );
 
 		site.calendar = calendar;
 		function handleKeyPress ( ) {

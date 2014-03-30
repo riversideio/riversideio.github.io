@@ -132,7 +132,8 @@
 }
 
 .expect {
-	padding: 40px;
+	padding: 0 40px 40px;
+  margin-top: -80px;
 }
 
 .become {
@@ -167,3 +168,35 @@
 	}
 }
 
+.hero-map {
+	margin-left: -50%;
+	margin-right: -50%;
+	min-height: 300px;
+  position: relative;
+  .map-content {
+    position : relative;
+    z-index: 2;
+    max-width: 815px;
+    padding: 40px 40px 120px;
+    margin: 0 auto;
+    .u-2-3{
+      p {
+        padding-left : 20px;
+        padding-right: 20px;
+      }
+      background : rgba( 255,255,255,.8 );
+    }
+  }
+  #map {
+    position : absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+	@media screen and ( max-width : $maxWidth ) {
+		margin-left: 0;
+		margin-right: 0;
+	} 
+}

@@ -1525,7 +1525,8 @@ body {
         top: 80px; } }
 
 .expect {
-  padding: 40px; }
+  padding: 0 40px 40px;
+  margin-top: -80px; }
 
 .become {
   background: #bf3730;
@@ -1549,6 +1550,34 @@ body {
       padding: 0; }
       .become .become-container input {
         max-width: 100%; } }
+
+.hero-map {
+  margin-left: -50%;
+  margin-right: -50%;
+  min-height: 300px;
+  position: relative; }
+  .hero-map .map-content {
+    position: relative;
+    z-index: 2;
+    max-width: 815px;
+    padding: 40px 40px 120px;
+    margin: 0 auto; }
+    .hero-map .map-content .u-2-3 {
+      background: rgba(255, 255, 255, 0.8); }
+      .hero-map .map-content .u-2-3 p {
+        padding-left: 20px;
+        padding-right: 20px; }
+  .hero-map #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; }
+  @media screen and (max-width: 815px) {
+    .hero-map {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .members-list {
   list-style-type: none;

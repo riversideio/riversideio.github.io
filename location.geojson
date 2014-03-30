@@ -1,0 +1,13 @@
+{
+  "type" : "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -117.372987100975,
+      33.9843246251766
+    ]
+  },
+  "properties": {
+    "name": "Riverside.io"
+  }
+}

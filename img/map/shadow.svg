@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg4134"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 12">
+  <defs
+     id="defs4136">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3793"
+       id="linearGradient3799"
+       x1="11.082216"
+       y1="34.253265"
+       x2="32.780689"
+       y2="8.8973322"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.75852884,0.20651378,-0.65817382,0.67371749,22.349647,6.1794736)" />
+    <linearGradient
+       id="linearGradient3793">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3795" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3797" />
+    </linearGradient>
+    <filter
+       id="filter3807"
+       inkscape:label="Blur content"
+       inkscape:menu="Blurs"
+       inkscape:menu-tooltip="Blur the contents of objects, preserving the outline"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3809"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result7" />
+      <feGaussianBlur
+         id="feGaussianBlur3811"
+         result="result6"
+         stdDeviation="5" />
+      <feComposite
+         id="feComposite3813"
+         in2="result7"
+         operator="atop"
+         in="result6"
+         result="result91" />
+      <feComposite
+         id="feComposite3815"
+         in2="result91"
+         operator="in" />
+    </filter>
+    <linearGradient
+       y2="8.8973322"
+       x2="32.780689"
+       y1="34.253265"
+       x1="11.082216"
+       gradientTransform="matrix(0.75852884,0.20651378,-0.65817382,0.67371749,28.419829,9.6145259)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4132"
+       xlink:href="#linearGradient3793"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.197802"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1543"
+     inkscape:window-height="876"
+     inkscape:window-x="57"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4139">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 40.419258,19.154886 c -1.032285,-2.638039 -5.30967,-3.432202 -9.553587,-1.775007 -7.337039,2.865023 -15.037693,11.37759 -15.037693,11.37759 0,0 11.438276,1.039059 18.775317,-1.825962 4.243916,-1.657194 6.848246,-5.138581 5.815963,-7.776621 z M 28.492487,23.81214 c -0.557375,-1.424386 0.848636,-3.304384 3.140621,-4.199374 2.291985,-0.894991 4.601566,-0.465883 5.158933,0.958499 0.557374,1.424385 -0.848634,3.304384 -3.140619,4.199375 -2.291985,0.894991 -4.601563,0.465881 -5.158935,-0.958499 z"
+       id="path6-0"
+       style="fill:url(#linearGradient4132);fill-opacity:1;filter:url(#filter3807)"
+       transform="matrix(1.0413652,-0.31920832,1.0173393,1.172458,-39.376654,-2.2007826)" />
+  </g>
+</svg>

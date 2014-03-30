@@ -1299,6 +1299,10 @@ small {
 header[role="main"] {
   max-height: 60px;
   padding: 20px; }
+  header[role="main"] img {
+    float: left;
+    margin-top: 3px;
+    margin-right: 10px; }
   header[role="main"] h1 {
     float: left;
     margin: .27em 0; }

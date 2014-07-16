@@ -3,18 +3,22 @@ about :
   - icon: icon-clock
     contents : 24/7 Member Access and Daily Rates for visitors
   - icon: icon-location
-    contents: "Downtown Riverside<br> [3567 Main St, Riverside, CA](https://www.google.com/maps/preview#!q=3567+Main+St%2C+Riverside%2C+CA&data=!4m15!2m14!1m13!1s0x80dcb1fa99afe221%3A0xfe3f25b87b503ecc!3m8!1m3!1d6608!2d-117.3729689!3d33.9841841!3m2!1i1535!2i767!4f13.1!4m2!3d33.9841879!4d-117.372977)"
+    contents: "Downtown Riverside<br> [3976 Market St, Riverside, CA](https://www.google.com/maps/place/3976+Market+St,+Riverside,+CA+92501/@33.9810399,-117.3766748,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcb1ee33f8cb9b:0x4e8dd2fb3a39642f)"
   - icon: icon-rocket
     contents: "Coworking and Community at just [$100/month](https://riversideio-access.herokuapp.com)"
 expect :
-  contents: 'Open tables, working WIFI, typing fingers, startup stickers, creative vibing, boxes of cookies, stocked fridge, witty banter, surprise doodles, and overall camaraderie. For the love of mayorship, dont forget to check in on [Foursquare](http://4sq.com/QvKQ2Z).'
+  contents: 'Open tables, chalkboard wall, 100mbps internets, typing fingers, startup stickers, creative vibing, boxes of cookies, stocked fridge, witty banter, surprise doodles, and overall camaraderie. For the love of mayorship, dont forget to check in on [Foursquare](http://4sq.com/QvKQ2Z).'
   list :
     - WIFI
     - 24/7 Access
     - Downtown
     - Nearby Eats
+    - Private room
     - Meeting Space
+    - Loft area
     - White Boards
+    - Chalkboard wall
+    - Ping Pong table
   photos :
     - src: /img/space/1.jpg 
       description: Find a desk. 

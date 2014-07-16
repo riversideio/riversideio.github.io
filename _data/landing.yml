@@ -12,13 +12,14 @@ expect :
     - WIFI
     - 24/7 Access
     - Downtown
-    - Nearby Eats
+    - Nearby eats
     - Private room
-    - Meeting Space
+    - Movie nights
+    - Meeting space
     - Loft area
-    - White Boards
+    - White boards
     - Chalkboard wall
-    - Ping Pong table
+    - Ping pong table
   photos :
     - src: /img/space/1.jpg 
       description: Find a desk. 

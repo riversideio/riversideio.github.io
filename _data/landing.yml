@@ -1,5 +1,5 @@
 subheader: The Riverside coworking space located in the heart of downtown.
-about :  
+about :
   - icon: icon-clock
     contents : 24/7 Member Access and Daily Rates for visitors
   - icon: icon-location
@@ -21,14 +21,14 @@ expect :
     - Chalkboard wall
     - Ping pong table
   photos :
-    - src: /img/space/1.jpg 
-      description: Find a desk. 
-    - src: /img/space/2.jpg 
-      description: Use the whiteboards. 
-    - src: /img/space/3.jpg 
-      description: Put your company logo or upcoming event in the window.
-    - src: /img/space/4.jpg 
-      description: Take a break on the couch. 
-    - src: /img/space/5.jpg 
-      description: Work outside in the California weather. 
-join : "How much does it cost? <br>Membership is just $100/mo at this time or $50/mo for students.<br><br>Email us at <a href='mailto:info@riverside.io'>info@riverside.io</a> to learn more.<br><br>You can use the form to get signed up right away. After doing so, follow up with us via <a href='mailto:info@riverside.io'>info@riverside.io</a>."
+    - src: /img/space/1.jpeg
+      # description: Find a desk.
+    - src: /img/space/2.jpeg
+      # description: Use the whiteboards.
+    - src: /img/space/3.jpeg
+      # description: Put your company logo or upcoming event in the window.
+    - src: /img/space/4.jpeg
+      # description: Take a break on the couch.
+    - src: /img/space/5.jpeg
+      # description: Work outside in the California weather.
+join : "How much does it cost? <br>Membership is $100/month $50/month for students.<br><br>Email us at <a href='mailto:info@riverside.io'>info@riverside.io</a> to learn more.<br><br>You can use the form to get signed up right away. After doing so, follow up with us via <a href='mailto:info@riverside.io'>info@riverside.io</a>."

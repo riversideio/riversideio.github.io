@@ -1,25 +1,25 @@
 - name : Adam Webster
   avatar : ./img/members/adamwebster.jpg
-  about : Adam is currently employed as an IT Director at the Inland Empire Labor Management Cooperation Committee. He is interested in exploring the intersection between technology community and creativity. 
+  about : Adam is currently employed as an IT Director at the Inland Empire Labor Management Cooperation Committee. He is interested in exploring the intersection between technology community and creativity.
 - name : Claressa Jaen
   avatar: ./img/members/claressajaen.jpg
   about : Claressa Jaen is a photographer, graphic designer, and brand strategist with an emphasis in spiritual development. She specializes in non-profit, ministry, and small business based work.
 - name : Daniel Villarreal
   avatar : ./img/members/danielvillarreal.jpg
   about : "Daniel handles system operations & web development for Cal State San Bernardino. He likes to build and break stuff and knows his way around Unix really well."
-- name : Gustavo Blanco 
+- name : Gustavo Blanco
   avatar : ./img/members/gustavoblanco.jpg
   about : Gustavo Blanco is a coffee lover, UC Riverside computer science student, and tech advocate for minorities. He likes startups and coding.
 - name : Henry Castro
   avatar : ./img/members/henrycastro.jpeg
-  about : Henry is the founder of [CodeFellas.com](http://thecodefellas.com). His talents range from SEO to design. He likes startups and web marketing.  
+  about : Henry is the founder of [CodeFellas.com](http://thecodefellas.com). His talents range from SEO to design. He likes startups and web marketing.
 - name: Jacob Lowe
   url: http://jacoblowe.me
   avatar : ./img/members/jacoblowe.jpg
   about: Jacob Lowe is passionate about the web and loves to push the bar with JavaScript. He helps organize Riverside.js. He is also a proud linux user.
-- name : Judd Lillestrand 
+- name : Judd Lillestrand
   avatar : ./img/members/juddlillestrand.jpg
-  about : Judd Lillestrand is a Ruby/Rails Developer, and the founder of http://mintsmith.com and http://scripsmart.com. He loves tech, the outdoors, and good people. 
+  about : Judd Lillestrand is a Ruby/Rails Developer, and the founder of http://mintsmith.com and http://scripsmart.com. He loves tech, the outdoors, and good people.
 - name : Justin Nelson
   avatar : ./img/members/justinnelson.jpg
   about : "Justin is a PhD student at UC Riverside, a card-carrying member of EFF, a Linux geek, and a rabble-rouser. He enjoys tinkering, beer, alternative transportation, and free culture."
@@ -29,15 +29,9 @@
 - name : Kevin Chandler
   avatar : ./img/members/kevinchandler.jpg
   about: "Kevin is a hacker, programmer, autodidact, productivity nut, cool guy, looking for his next big endeavor in life. You should follow him on twitter [@plaintshirts](https://twitter.com/plaintshirts)"
-- name : Long Dao
-  avatar : ./img/members/longdao.jpg
-  about : "Thanks to Riverside.IO, I've signed several website contracts, made a lot of talented friends, and found a hot girl and got engaged to be married. If you come stop by, you WILL find yourself a girl (or guy) and save a LOT on car insurance too. Gosh o MIGHTY. I love Riverside.IO so much that I can barely walk. Barely BREATHE. I need someone to walk across the street with or I'll fall down. I love it so much that I think I'll have my wedding here. Maybe I'll name my first kid Riverside.IO. You should too."
 - name : Lauren Patterson
   avatar : ./img/members/laurenpatterson.jpg
   about: "Hi I'm Lauren."
-- name : Melissa Morgan
-  avatar : ./img/members/melissamorgan.jpg
-  about : "Melissa has a rich, diverse background, combined with a vision to continually be learning, teaching, serving and being creative. She is an artist, graphic designer, diversity educator, volunteer, youth advocate, mom and peacemaker at heart."
 - name : Mike Kennedy
   avatar : ./img/members/mikekennedy.jpg
   about : "Mike is an Enterprise Architect at UC Riverside. He is an organizer of StartupIE and enjoys programming in Java, Objective-C and Ruby."
@@ -53,9 +47,6 @@
 - name : Scott Motte
   avatar : ./img/members/scottmotte.png
   about : Scott is a developer evangelist at [SendGrid](http://sendgrid.com). He likes to code in Ruby and JavaScript and is passionate about building tech community. Follow him [@scottmotte](http://twitter.com/scottmotte).
-- name : Steven Harbauer
-  avatar : ./img/members/stevenharbauer.jpg
-  about : Steven is a programmer and engineer. He spends his weekends teaching kids how to code at Riverside.io. 
 - name : Victor Hill
   avatar : ./img/members/victorhill.jpg
   about : Victor Hill is an IT manager for the Computer Science department at UC Riverside. He's deeply passionate about IT and open source.

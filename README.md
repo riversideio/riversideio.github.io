@@ -20,7 +20,7 @@ and inside of that file you will find a key with that looks like `subheader:` an
 
 ##### Post / Pages
 
-Some of the extra pages are not found in the index template, they are stand alone files inside the `_post` folder. Inside here the pages are more human readable then `<html>` the technology is call [Markdown](http://en.wikipedia.org/wiki/Markdown). This is a great way to create a new page, and if you doning this directly from [Github](http://github.com) you can use their built in Markdown Editor, that has live preview as well. The naming convention is `year-month-day-title.markdown` if you try to submit a file without that convention 'Jeykll' will not pick it up.
+Some of the extra pages are not found in the index template, they are stand alone files inside the `_post` folder. Inside here the pages are more human readable then `<html>` the technology is call [Markdown](http://en.wikipedia.org/wiki/Markdown). This is a great way to create a new page, and if you doning this directly from [Github](http://github.com) you can use their built in Markdown Editor, that has live preview as well. The naming convention is `year-month-day-title.markdown` if you try to submit a file without that convention 'Jekyll' will not pick it up.
 
 ### How to Contribute
 
@@ -30,21 +30,21 @@ Contributing is the same thing as Editing but I broke it off into another sectio
 
 ##### This is all in Terminal or Command Prompt
 
-You will need [Ruby](https://www.ruby-lang.org/en/downloads/) & [Ruby Gems](http://rubygems.org/pages/download), instructions to install are on that site. Once those are installed you will need `Jeykll`.
+You will need [Ruby](https://www.ruby-lang.org/en/downloads/) & [Ruby Gems](http://rubygems.org/pages/download), instructions to install are on that site. Once those are installed you will need `Jekyll`.
 
 ```
-gem install jeykll
+gem install jekyll
 ```
-Now that you have Jeykll, you can build up new templates and edit everything on the site including styles and layout. To do that run.
+Now that you have Jekyll, you can build up new templates and edit everything on the site including styles and layout. To do that run.
 
 ```
-jeykll build 
+jekyll build 
 ```
 
 then to preview the site just run
 
 ```
-jeykll serve
+jekyll serve
 ```
 
 Then visit `localhost:4000` and the site should be there if not check for errors in you terminal.

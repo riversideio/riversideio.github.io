@@ -31,4 +31,4 @@ expect :
       # description:
     - src: /img/space/5.jpeg
       # description:
-join : "How much does it cost?<br>$100/month<br>$50/month for students<br><br>Email us at <a href='mailto:info@riverside.io'>info@riverside.io</a> to learn more.<br><br>You can use the form to get signed up right away. After doing so, follow up with us via <a href='mailto:info@riverside.io'>info@riverside.io</a>."
+join : "Membership:<br>$100/mo.<br>$50/mo. students<br><br>Email us at <a href='mailto:info@riverside.io'>info@riverside.io</a> to learn more.<br><br>You can use the form to get signed up right away. After doing so, follow up with us via <a href='mailto:info@riverside.io'>info@riverside.io</a>."

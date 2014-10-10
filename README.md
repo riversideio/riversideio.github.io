@@ -1,5 +1,13 @@
 # Riverside.io 
 
+<img src="https://raw.githubusercontent.com/riversideio/riversideio.github.com/master/riversideio.png" alt="Riverside I/O" align="right" width="220" />
+
+```
+git clone https://github.com/riversideio/riversideio.github.com.git
+cd riversideio.github.com
+jekyll serve
+```
+
 ### How to Edit
 
 ```
